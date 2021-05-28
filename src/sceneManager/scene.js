@@ -5,8 +5,8 @@ import Stats from 'stats.js';
 export default class SceneManager {
 
     constructor(canvas){
-         this.canvas = canvas;
-         this._init();
+        this.canvas = canvas;
+        this._init();
     }
 
     _init(){
@@ -20,9 +20,9 @@ export default class SceneManager {
         window.addEventListener('resize', () => this.onWindowsResize(), false);
 
         const camera = new THREE.PerspectiveCamera(75 ,window.innerWidth / window.innerHeight,0.1,1000);
-        camera.position.z = 20;
-        camera.position.y = 5;
-        camera.lookAt(0,0,0);
+        // camera.position.y = 5;
+        camera.position.z = 5;
+        // camera.lookAt(0,0,0);
 
         //init stats
         let stats = new Stats();
